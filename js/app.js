@@ -3,7 +3,8 @@
 let pokemones;
 
 
-fetch("https://raw.githubusercontent.com/oicrruf/g15-computer-science/develop/ejercicios/pokedex-registro/json/pokemon.json")
+ fetch("https://raw.githubusercontent.com/oicrruf/g15-computer-science/develop/ejercicios/pokedex-registro/json/pokemon.json")
+
   .then(response => response.json())
   .then((data) => {
     pokemones = data;
@@ -32,29 +33,44 @@ let dibujar = (pokemonesArr) => {
         let cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
 
-        let h5 = document.createElement("h5");
-        h5.classList.add("card-title")
-        h5.innerHTML=pokemonesArr[i].name;
-        cardBody.append(h5);
+        let h4 = document.createElement("h4");
+        h4.classList.add("card-title")
+        h4.innerHTML=pokemonesArr[i].name;
+        cardBody.append(h4);
 
-        let a = document.createElement("a");
-        a.setAttribute("href","#")
-        a.classList.add("btn","btn-primary");
-        a.innerHTML="Informacion";
-        a.setAttribute("data-number",pokemonesArr[i].number);
-        a.dataset.name=pokemonesArr[i].name;
-        a.dataset.type=pokemonesArr[i].type;
+        let h6 =document.createElement("h6");
+        h6.classList.add("card.text")
+        h6.innerHTML=pokemonesArr[i].type;
+        cardBody.append(h6);
 
-        a.addEventListener("click",function(evt){
-            evt.preventDefault();
-            alert(`${evt.target.dataset.name},  ${evt.target.dataset.number}, ${evt.target.dataset.type} `);
-        });
 
-        cardBody.append(a);
+        //  let a = document.createElement("a");
+        // a.setAttribute("href","#")
+        // a.classList.add("btn","btn-primary");
+        // a.innerHTML="Informacion";
+        // a.setAttribute("data-number",pokemonesArr[i].number);
+        // a.dataset.name=pokemonesArr[i].name;
+        // a.dataset.type=pokemonesArr[i].type;
+
+        // a.addEventListener("click",function(evt){
+        //     evt.preventDefault();
+        //     alert(`${evt.target.dataset.name},  ${evt.target.dataset.number}, ${evt.target.dataset.type} `);
+        // }); 
+
+        // cardBody.append(a);
+
+        card.addEventListener("click", mostrarModal);
+
         card.append(cardBody)
         col.append(card);
 
         document.querySelector("#resultados").append(col);
     } 
 
+
+
+}
+
+const mostrarModal = () => {
+    console.log("mostrar modal")
 }

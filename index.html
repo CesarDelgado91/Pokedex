@@ -26,10 +26,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" id="home" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="#">A-Z</a>
+                    <a class="nav-link active" id="alfabeto" aria-current="page" href="#">A-Z</a>
                   </li>
 
                   <li class="nav-item dropdown">
@@ -37,22 +37,16 @@
                       Tipos
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Agua</a></li>
-                      <li><a class="dropdown-item" href="#">Fuego</a></li>
-                      <li><a class="dropdown-item" href="#">Cesped</a></li>
-                      <li><a class="dropdown-item" href="#">Veneno</a></li>
-                      <li><a class="dropdown-item" href="#">Volador</a></li>
-                      <li><a class="dropdown-item" href="#">Insecto</a></li>
-                      <li><a class="dropdown-item" href="#">Oscura</a></li>
-                      <li><a class="dropdown-item" href="#">Electrico</a></li>
-                      <li><a class="dropdown-item" href="#">Hielo</a></li>
-                      <li><a class="dropdown-item" href="#">Acero</a></li>
-                      <li><a class="dropdown-item" href="#">Terrestre</a></li>
-                      <li><a class="dropdown-item" href="#">Lucha</a></li>
-                      <li><a class="dropdown-item" href="#">Psiquico</a></li>
-                      <li><a class="dropdown-item" href="#">Roca</a></li>
-                      <li><a class="dropdown-item" href="#">Fantasma</a></li>
-                      <li><a class="dropdown-item" href="#">Normal</a></li>
+                      <li><a class="dropdown-item" id="Grass" href="#">Cesped</a></li>
+                      <li><a class="dropdown-item" id="Poison" href="#">Veneno</a></li>
+                      <li><a class="dropdown-item" id="Bug" href="#">Insecto</a></li>
+                      <li><a class="dropdown-item" id="Dark" href="#">Oscura</a></li>
+                      <li><a class="dropdown-item" id="Steel" href="#">Acero</a></li>
+                      <li><a class="dropdown-item" id="Fighting" href="#">Lucha</a></li>
+                      <li><a class="dropdown-item" id="Psychic" href="#">Psiquico</a></li>
+                      <li><a class="dropdown-item" id="Rock" href="#">Roca</a></li>
+                      <li><a class="dropdown-item" id="Ghost" href="#">Fantasma</a></li>
+                      <li><a class="dropdown-item" id="Normal" href="#">Normal</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -74,42 +68,42 @@
       <div class=" row justify-content-between">
 
         <div class=" col-2 mt-3">
-          <a href="#" id="elecrtico" class="has-text-centered">
+          <a href="#" id="Electric" class="has-text-centered">
             <figure class="image" >
                 <img src="img/electrico.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
         <div class=" col-2 mt-3">
-          <a href="#" id="agua" class="has-text-centered">
+          <a href="#" id="Water" class="has-text-centered">
           <figure class="image">
               <img src="img/agua.jpg" class="img-fluid" alt="...">
           </figure>
           </a>
         </div>
         <div class=" col-2 mt-3">
-          <a href="#" id="tierra" class="has-text-centered">
+          <a href="#" id="Ground" class="has-text-centered">
             <figure class="image">
                 <img src="img/tierra.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
         <div class=" col-2 mt-3">
-          <a href="#" id="fuego" class="has-text-centered">
+          <a href="#" id="Fire" class="has-text-centered">
             <figure class="image">
                 <img src="img/fuego.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
         <div class=" col-2 mt-3">
-          <a href="#" id="volador" class="has-text-centered">
+          <a href="#" id="Flying" class="has-text-centered">
             <figure class="image">
                 <img src="img/volador.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
         <div class=" col-2 mt-3">
-          <a href="#" id="hielo" class="has-text-centered">
+          <a href="#" id="Ice" class="has-text-centered">
             <figure class="image">
                 <img src="img/hielo.jpg" class="img-fluid" alt="...">
             </figure>
@@ -123,6 +117,30 @@
       <div class="row" id="resultados">
        
       </div>
+
+      <!-- Button trigger modal -->
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+    </button>
+  
+  <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+                </div>
+            </div>
       
 
     </div>
