@@ -1,5 +1,12 @@
 
-const modal = document.querySelector('#modal')
+const nombrePokemon = document.querySelector("#nombrePokemon")
+const imagenPokemon = document.querySelector("#imagenPokemon")
+const pesoPokemon = document.querySelector("#pesoPokemon")
+const alturaPokemon = document.querySelector("#alturaPokemon")
+const tipoPokemon = document.querySelector("#tipoPokemon")
+const habilidadesPokemon = document.querySelector("#habilidadesPokemon")
+const debilidadesPokemon = document.querySelector("#debilidadesPokemon")
+
 
 let pokemones;
 
@@ -29,6 +36,8 @@ let dibujar = (pokemonesArr) => {
         let img = document.createElement("img")
         img.src=pokemonesArr[i].ThumbnailImage;
         img.classList.add("card-img-top");
+        img.setAttribute("data-bs-toggle","modal");
+        img.setAttribute("data-bs-target","#miModal");
 
         card.append(img);
 
@@ -42,6 +51,7 @@ let dibujar = (pokemonesArr) => {
         
         let h5 =document.createElement("h5");
         h5.classList.add("card.text")
+        h5.style.textAlign = "right";
         h5.innerHTML=pokemonesArr[i].number;
         cardBody.append(h5);
 
@@ -65,7 +75,6 @@ let dibujar = (pokemonesArr) => {
         // }); 
 
         // cardBody.append(a);
-
         card.addEventListener("click", ()=> mostrarModal(card.dataset.number));
 
         card.append(cardBody)
@@ -78,10 +87,33 @@ let dibujar = (pokemonesArr) => {
 
 }
 
+const llenarModal =(filtropokemon) => {
+
+  const {number,name,ThumbnailImage,weight,height,type,abilities,weakness} = filtropokemon[0];
+ 
+  nombrePokemon.innerText = name;
+  imagenPokemon.setAttribute("src", ThumbnailImage);
+  pesoPokemon.innerText =`Peso:  ${weight}` ;
+  alturaPokemon.innerText =`Altura:  ${height}` ;
+  tipoPokemon.innerText =`Tipo:  ${type}` ;
+  habilidadesPokemon.innerText =`Habilidad:  ${abilities}` ;
+  debilidadesPokemon.innerText =`Debilidad:  ${weakness}` ;
+};
+
 const mostrarModal = (number) => {
     // console.log(modal.classList)
     
-    modal.a
+    nombrePokemon.innerText ="";
+    pesoPokemon.innerText = "";
+    alturaPokemon.innerText = "";
+    tipoPokemon.innerText = "";
+    habilidadesPokemon.innerText = "";
+    debilidadesPokemon.innerText = "";
 
-    console.log("mostrar modal", number);
-}
+    let filtro = pokemones.filter((pokemon)=>{
+        return pokemon.number == number; 
+
+    });
+
+    llenarModal(filtro);
+} 

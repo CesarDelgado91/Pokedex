@@ -1,6 +1,16 @@
-.card img{
+/* .card img{
     height: 300px;
     width: 100%;
     object-fit: cover;
+} */
+body{
+    background-color:#FFDB5C;
 }
+
+.card{
+    background: #FFEC5C;
+}
+
+
+
 
