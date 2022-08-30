@@ -1,4 +1,5 @@
 
+const modal = document.querySelector('#modal')
 
 let pokemones;
 
@@ -23,6 +24,7 @@ let dibujar = (pokemonesArr) => {
 
         let card = document.createElement("div");
         card.classList.add("card","mt-5");
+        card.setAttribute("data-number", pokemonesArr[i].number);
 
         let img = document.createElement("img")
         img.src=pokemonesArr[i].ThumbnailImage;
@@ -37,6 +39,11 @@ let dibujar = (pokemonesArr) => {
         h4.classList.add("card-title")
         h4.innerHTML=pokemonesArr[i].name;
         cardBody.append(h4);
+        
+        let h5 =document.createElement("h5");
+        h5.classList.add("card.text")
+        h5.innerHTML=pokemonesArr[i].number;
+        cardBody.append(h5);
 
         let h6 =document.createElement("h6");
         h6.classList.add("card.text")
@@ -59,7 +66,7 @@ let dibujar = (pokemonesArr) => {
 
         // cardBody.append(a);
 
-        card.addEventListener("click", mostrarModal);
+        card.addEventListener("click", ()=> mostrarModal(card.dataset.number));
 
         card.append(cardBody)
         col.append(card);
@@ -71,6 +78,10 @@ let dibujar = (pokemonesArr) => {
 
 }
 
-const mostrarModal = () => {
-    console.log("mostrar modal")
+const mostrarModal = (number) => {
+    // console.log(modal.classList)
+    
+    modal.a
+
+    console.log("mostrar modal", number);
 }

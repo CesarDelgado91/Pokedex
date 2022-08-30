@@ -13,7 +13,7 @@ let buscar = (evt) => {
 
  let buscarTipo = (categoria)=>{
     let filtro = pokemones.filter((pokemon)=>{
-        return pokemon.type == categoria; 
+        return pokemon.type.includes(categoria); 
 
     });
     dibujar(filtro)
@@ -25,7 +25,7 @@ let buscar = (evt) => {
 // keydown, keyup, keypress
   document.querySelector("#inputBusqueda").addEventListener("keyup", buscar);
  
-  document.querySelector("#home").addEventListener("click", function (){dibujar(pokemones)} );
+  // document.querySelector("#home").addEventListener("click", function (){dibujar(pokemones)} );
   document.querySelector("#Fire").addEventListener("click", function (){buscarTipo("fire")} );
   document.querySelector("#Electric").addEventListener("click", function (){buscarTipo("electric")} );
   document.querySelector("#Water").addEventListener("click", function (){buscarTipo("water")} );
@@ -48,6 +48,13 @@ let buscar = (evt) => {
   document.querySelector("#alfabeto").addEventListener("click",()=>{
     pokemones.sort(function(a,b){
       return a.name > b.name ? 1 : -1;
+    });
+    dibujar(pokemones);
+  })
+
+  document.querySelector("#numero").addEventListener("click",()=>{
+    pokemones.sort(function(a,b){
+      return a.number > b.number ? 1 : -1;
     });
     dibujar(pokemones);
   })
