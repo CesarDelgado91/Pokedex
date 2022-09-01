@@ -61,20 +61,7 @@ let dibujar = (pokemonesArr) => {
         cardBody.append(h6);
 
 
-        //  let a = document.createElement("a");
-        // a.setAttribute("href","#")
-        // a.classList.add("btn","btn-primary");
-        // a.innerHTML="Informacion";
-        // a.setAttribute("data-number",pokemonesArr[i].number);
-        // a.dataset.name=pokemonesArr[i].name;
-        // a.dataset.type=pokemonesArr[i].type;
-
-        // a.addEventListener("click",function(evt){
-        //     evt.preventDefault();
-        //     alert(`${evt.target.dataset.name},  ${evt.target.dataset.number}, ${evt.target.dataset.type} `);
-        // }); 
-
-        // cardBody.append(a);
+    
         card.addEventListener("click", ()=> mostrarModal(card.dataset.number));
 
         card.append(cardBody)

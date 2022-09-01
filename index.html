@@ -14,7 +14,7 @@
 
 <body>
     <header class="fixed-top" >
-        <nav class="navbar navbar-expand-lg bg-warning mb-lg-0">
+        <nav class="navbar navbar-expand-lg bg-warning mb-lg-0 ">
             <div class="container-fluid" >
               <a class="has-text-centered m-2">
                     <img src="img/pokemon.jpg" class="img-fluid" alt="...">
@@ -27,18 +27,18 @@
                </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <li class="nav-item filtros">
                     <a class="nav-link active" id="numero" aria-current="page" href="#">Posicion</a>
                   </li>
-                  <li class="nav-item ">
+                  <li class="nav-item filtros">
                     <a class="nav-link active" id="alfabeto" aria-current="page" href="#">A-Z</a>
                   </li>
 
-                  <li class="nav-item dropdown">
+                  <li class="nav-item dropdown filtros">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Mas Tipos...
+                      Mas Tipos
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu filtros">
                       <li><a class="dropdown-item" id="Grass" href="#">Cesped</a></li>
                       <li><a class="dropdown-item" id="Poison" href="#">Veneno</a></li>
                       <li><a class="dropdown-item" id="Bug" href="#">Insecto</a></li>
@@ -55,8 +55,8 @@
               
                  
                 
-                <form class="d-flex" role="search" id="busqueda">
-                  <input class="form-control me-4" id="inputBusqueda" type="text" placeholder="Buscar" aria-label="Buscar">
+                <form class="d-flex buscar" role="search" id="busqueda">
+                  <input class="form-control me-4 " id="inputBusqueda" type="text" placeholder="Buscar..." aria-label="Buscar">
                   <!-- <button class="btn btn-outline-success" type="button" id="busqueda">Buscar</button> -->
                 </form>
               </div>
@@ -66,45 +66,45 @@
         
     </header>
 
-    <div class="container " style="margin-top:9vh ;">
+    <div class="container" style="margin-top:12vh">
       <div class=" row justify-content-between"  >
 
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1 ">
           <a href="#" id="Electric" class="has-text-centered">
-            <figure class="image" >
-                <img src="img/electrico.jpg" class="img-fluid" alt="...">
+            <figure class="image"  >
+                <img src="img/electrico.jpg" class="img-fluid" alt="..." >
             </figure>
             </a>
         </div>
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1">
           <a href="#" id="Water" class="has-text-centered">
           <figure class="image">
               <img src="img/agua.jpg" class="img-fluid" alt="...">
           </figure>
           </a>
         </div>
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1">
           <a href="#" id="Ground" class="has-text-centered">
             <figure class="image">
                 <img src="img/tierra.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1">
           <a href="#" id="Fire" class="has-text-centered">
             <figure class="image">
                 <img src="img/fuego.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1">
           <a href="#" id="Flying" class="has-text-centered">
             <figure class="image">
                 <img src="img/volador.jpg" class="img-fluid" alt="...">
             </figure>
             </a>
         </div>
-        <div class=" col-2 mt-3">
+        <div class=" col-2 mt-3 imagen1">
           <a href="#" id="Ice" class="has-text-centered">
             <figure class="image">
                 <img src="img/hielo.jpg" class="img-fluid" alt="...">
@@ -130,7 +130,7 @@
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                         <h5 class="modal-title " id="nombrePokemon" ></h5>
+                         <h5 class="modal-title" id="nombrePokemon"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body"  >
@@ -153,7 +153,13 @@
       
 
     </div>
-    
+    <footer class="footer text-center mt-5">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Pokedex</strong> &copy; 2022 <span class="mx-2">&middot;</span> Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
   <script src="js/app.js"></script>
   <script src="js/filters.js"></script>
   

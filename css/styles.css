@@ -5,20 +5,47 @@
 } */
 
 
-nav{
+/* nav{
     background-color: #cb0000;
     
-} 
+} */ 
+
+.imagen1:hover img{
+    transform: scale(1.2);
+    
+}
+
+.filtros:hover a{
+    transform: scale(1.2);
+   
+    
+}
+
+img:hover{
+    transform: scale(1.2);   
+
+}
+
+.buscar:hover input{
+    transform: scale(1.1);
+    background: #f1f1f2;
+}
+
 
 body{
-    background-color: #f1f1f2;
+    background-color: #ffff;
 }
 
 .card{
-    background: #ffeb94;
+    background: #ffff;
+    border-top-width: 10px;
+    border-right-width: 10px;   
 }
 
-
+.card-body{
+    background-color: #f1f1f2 ;
+    
+}
 
 
 
